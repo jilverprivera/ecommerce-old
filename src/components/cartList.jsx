@@ -17,7 +17,7 @@ export const CartList = ({ cart }) => {
                 </div>
 
                 <p className="cart__totalPrice">Total: ${total} USD</p>
-                {/* <PayPalButton total={total} tranSuccess={tranSuccess} /> */}
+                <PayPalButton total={total} tranSuccess={tranSuccess} />
             </div>
         </div>
     );
