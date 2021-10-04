@@ -2,9 +2,9 @@ import React from "react";
 import PaypalExpressBtn from "react-paypal-express-checkout";
 import Swal from "sweetalert2";
 
-const PayPalButton = ({ totalCart, tranSuccess }) => {
+const PayPalButton = (props) => {
     const onSuccess = (payment) => {
-        tranSuccess(payment);
+        props.tranSuccess(payment);
     };
 
     const onCancel = (data) => {
@@ -25,9 +25,9 @@ const PayPalButton = ({ totalCart, tranSuccess }) => {
         });
     };
 
-    let env = "production";
+    let env = "sandbox";
     let currency = "USD";
-    let total = totalCart;
+    let total = props.totalCart;
 
     const client = {
         sandbox:
