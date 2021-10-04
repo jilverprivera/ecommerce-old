@@ -6,7 +6,6 @@ import { GlobalContext } from "../context/Context";
 
 const Shopping = () => {
     const { history } = useContext(GlobalContext);
-    console.log(history);
     return (
         <Layout>
             <div className="principal">

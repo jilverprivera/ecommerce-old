@@ -1,5 +1,6 @@
 import React from "react";
 import PaypalExpressBtn from "react-paypal-express-checkout";
+import Swal from "sweetalert2";
 
 const PayPalButton = ({ totalCart, tranSuccess }) => {
     const onSuccess = (payment) => {
@@ -7,11 +8,21 @@ const PayPalButton = ({ totalCart, tranSuccess }) => {
     };
 
     const onCancel = (data) => {
-        console.log("The payment was cancelled!", data);
+        Swal.fire({
+            icon: "warning",
+            title: "Oops!",
+            text: `The payment was cancelled ${data}`,
+            showConfirmButton: true,
+        });
     };
 
     const onError = (err) => {
-        console.log("Error!", err);
+        Swal.fire({
+            icon: "error",
+            title: "Error!",
+            text: ` ${err}`,
+            showConfirmButton: true,
+        });
     };
 
     let env = "production";
