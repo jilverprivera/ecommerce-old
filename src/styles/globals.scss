@@ -1,0 +1,88 @@
+@import "./variables/variables";
+// Global CSS properties
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+    font-family: "Urbanist", sans-serif;
+}
+
+body {
+    font-size: 1.6rem;
+}
+
+body {
+    background-color: $white;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+    height: 0px;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: $white;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: $gray2;
+    border-radius: 2px;
+}
+
+*,
+*:before,
+*:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: inherit;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 100%;
+    // margin: 7rem auto;
+}
+.wrapper {
+    max-width: 130rem;
+    min-height: 100vh;
+    margin: 0 auto;
+    // border: 1px solid #000;
+}
+
+.wrapper__flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: calc(100vh - 8rem);
+
+}
+
+.wrapper__grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+    place-items: center;
+    min-height: calc(100vh - 8rem);
+}
+// SCSS files import
+
+// Layout
+@import "./components/layout/header";
+
+@import "./components/buttons";
+@import "./components/pagination";
+
+@import "./components/auth";
+@import "./components/home";
+@import "./components/cart";
+@import "./components/shopping";
+@import "./components/detail";
+

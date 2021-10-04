@@ -1,0 +1,179 @@
+.header {
+    width: 100%;
+    height: 7rem;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+    .header__wrapper {
+        width: 90%;
+        margin: 0 auto;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .navigation {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            .nav__logo {
+                font-size: 3rem;
+                margin-right: 2.5rem;
+                @media (max-width: 76.8rem) {
+                    font-size: 2rem;
+                }
+            }
+            .nav__wrapper {
+                padding-left: 2.5rem;
+                border-left: 1px solid #000;
+                .nav__link {
+                    margin: 1rem;
+                    color: $black;
+                }
+                .selected {
+                    color: $black;
+                    font-weight: 600;
+                }
+                @media (max-width: 76.8rem) {
+                    display: none;
+                }
+            }
+        }
+
+        .auth__wrapper {
+            @media (max-width: 76.8rem) {
+                display: none;
+            }
+            .auth__link {
+                margin: 1rem;
+                color: $black;
+            }
+        }
+        .logged__container {
+            @media (max-width: 76.8rem) {
+                display: none;
+            }
+            .cart__link {
+                position: relative;
+                // border: 1px solid #000;
+                padding: 1rem 1.2rem;
+                top: 0.5rem;
+                font-size: 2.5rem;
+                color: $gray2;
+                .cart__length {
+                    width: 2rem;
+                    height: 2rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    background-color: $danger;
+                    border-radius: 50%;
+                    top: 0;
+                    right: 0;
+                    font-size: 1.2rem;
+                    color: $white;
+                    font-weight: bold;
+                }
+            }
+            .btn__logout {
+                font-size: 1.6rem;
+                margin-left: 1.5rem;
+                padding: 1rem 2rem;
+                background-color: $danger;
+                color: $white;
+                border: none;
+                outline: none;
+                border-radius: 0.3rem;
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+        .menu {
+            display: none;
+            @media (max-width: 76.8rem) {
+                display: block;
+                font-size: 2.5rem;
+            }
+        }
+    }
+}
+.drawer {
+    width: 100%;
+    height: calc(100vh - 7rem);
+    position: fixed;
+    top: 7rem;
+    left: 0;
+    background-color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .drawer__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        .nav__link {
+            margin: 1rem auto;
+            font-size: 2.5rem;
+            color: $gray2;
+            font-weight: bold;
+        }
+    }
+    .cart__wrapper {
+        position: absolute;
+        top: 0rem;
+        right: 2rem;
+        .cart__link {
+            position: relative;
+            // border: 1px solid #000;
+            padding: 1rem 1.2rem;
+            top: 0.5rem;
+            font-size: 3rem;
+            color: $gray2;
+            .cart__length {
+                width: 2rem;
+                height: 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                background-color: $danger;
+                border-radius: 50%;
+                top: 0;
+                right: 0;
+                font-size: 1.2rem;
+                color: $white;
+                font-weight: bold;
+            }
+        }
+    }
+    .drawer__btn__logout {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        .btn__block {
+            display: block;
+            width: 100%;
+        }
+        .btn__logout {
+            font-size: 2.5rem;
+            // margin-left: 1.5rem;
+            padding: 2rem 2rem;
+            background-color: $danger;
+            color: $white;
+            border: none;
+            outline: none;
+            border-radius: 0.3rem;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

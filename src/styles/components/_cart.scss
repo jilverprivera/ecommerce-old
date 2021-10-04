@@ -1,0 +1,108 @@
+.cart__card {
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    border-bottom: 0.1rem solid $gray;
+    padding: 2rem 0;
+    margin: 1rem auto;
+    &:last-child {
+        @media (max-width: 76.8rem) {
+            border-bottom: none;
+        }
+    }
+    @media (max-width: 76.8rem) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+.cart__image {
+    width: 15rem;
+    height: 10rem;
+    object-fit: contain;
+    @media (max-width: 76.8rem) {
+        width: 100%;
+        height: 20rem;
+        // border: 0.1rem solid #000;
+    }
+}
+.cart__content {
+    grid-column: span 2;
+    @media (max-width: 76.8rem) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    .cart__name {
+        font-size: $h2;
+        @media (max-width: 76.8rem) {
+            margin: 1rem 0;
+        }
+    }
+    .cart__ref {
+        font-weight: 500;
+        @media (max-width: 76.8rem) {
+            margin: 1rem 0;
+            text-align: center;
+            font-size: $extra_small;
+        }
+    }
+    .cart__price-content {
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        @media (max-width: 76.8rem) {
+            justify-content: space-around;
+            flex-direction: row;
+        }
+    }
+}
+.cart__display-content {
+    // border: 1px solid #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media (max-width: 76.8rem) {
+        margin: 1rem 0;
+    }
+    .cart__quantity {
+        font-size: 2rem;
+        @media (max-width: 76.8rem) {
+            font-size: 1.5rem;
+        }
+    }
+    .quantity__btn {
+        width: 4rem;
+        height: 4rem;
+        border: none;
+
+        outline: none;
+        font-size: 2.5rem;
+        background-color: $gray;
+        color: $white2;
+        margin: 0rem 1rem;
+        border-radius: 50%;
+        &:hover {
+            background-color: $gray2;
+        }
+        @media (max-width: 76.8rem) {
+            font-size: 2rem;
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+}
+.cart__totalPrice{
+    margin-top: 2rem;
+    font-size: 2rem;
+    text-align: center;
+    @media (max-width: 76.8rem) {
+        font-size: 1.6rem;
+        
+    }
+}

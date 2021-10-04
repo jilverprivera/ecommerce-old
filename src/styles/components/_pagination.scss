@@ -1,0 +1,30 @@
+.pagination__wrapper {
+    margin: 2rem auto;
+    .pagination__list {
+        display: flex;
+        align-items: center;
+        list-style: none;
+        justify-content: center;
+
+        .pagination__list-item {
+            font-weight: 500;
+            font-size: 1.8rem;
+            margin: 0rem 1rem;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+        .pagination__list-item-activated {
+            font-weight: 700;
+            font-size: 1.8rem;
+            margin: 0rem 1rem;
+            padding: 0.5rem 1rem;
+            background: $secondary;
+            border-radius: 0.3rem;
+            color: $white;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

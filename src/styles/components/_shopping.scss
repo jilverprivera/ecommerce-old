@@ -1,0 +1,16 @@
+.shoppingCard__container {
+    width: 90%;
+    padding: 1rem 2rem;
+    margin: 1rem auto;
+    background-color: $white;
+    box-shadow: 0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+
+    .shoppingCard__content {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+
+        place-items: center;
+    }
+}

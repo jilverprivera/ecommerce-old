@@ -1,0 +1,42 @@
+.btn {
+    outline: none;
+    border: none;
+    font-size: $normal;
+    border-radius: 0.3rem;
+    margin-top: 1rem;
+    &:hover {
+        cursor: pointer;
+    }
+}
+.btn__small {
+    padding: 1rem 2rem;
+}
+.btn__large {
+    padding: 1.5rem 3rem;
+}
+.btn__block {
+    display: block !important;
+    width: 100%;
+}
+
+.btn__primary {
+    background-color: $primary;
+}
+.btn__secondary {
+    background-color: $secondary;
+    color: $white;
+    &:hover {
+        background-color: lighten($secondary, 10%);
+    }
+}
+.btn__danger {
+    background-color: $danger;
+    color: $white;
+    &:hover {
+        background-color: darken($danger, 10%);
+    }
+}
+
+.logout {
+    margin-left: 1.5rem;
+}
