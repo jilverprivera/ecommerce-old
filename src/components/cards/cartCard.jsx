@@ -1,15 +1,9 @@
 import React from "react";
 import { useCart } from "../../hooks/useCart";
 
-export const CartCard = ({
-    _id,
-    name,
-    images,
-    price,
-    quantity,
-    product_id,
-    stock,
-}) => {
+export const CartCard = ({ cart }) => {
+    const { _id, name, images, price, quantity, product_id, stock } = cart;
+    if (cart.length === 0) return null;
     const { incrementQuantity, decrementQuantity, removeProduct } = useCart();
     return (
         <div className="cart__card">

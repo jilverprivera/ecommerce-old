@@ -1,21 +1,24 @@
 import React, { useContext } from "react";
 import { CartList } from "../components/cartList";
 import { EmptyCart } from "../components/emptyCart";
-import Header from "../components/layout/header";
+import Layout from "../components/layout/layout";
 import { GlobalContext } from "../context/Context";
 
 const Cart = () => {
     const { cart } = useContext(GlobalContext);
 
     if (cart.length === 0) {
-        return <EmptyCart />;
+        return (
+            <Layout>
+                <EmptyCart />
+            </Layout>
+        );
     }
 
     return (
-        <div>
-            <Header/>
-            <CartList cart= { cart }/>
-        </div>
+        <Layout>
+            <CartList cart={cart} />
+        </Layout>
     );
 };
 

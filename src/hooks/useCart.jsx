@@ -71,5 +71,37 @@ export const useCart = () => {
         });
     };
 
-    return { total, incrementQuantity, decrementQuantity, removeProduct };
+    const tranSuccess = async (payment) => {
+        const { paymentID, address } = payment;
+        await ecommerceURL.post(
+            "/api/payment",
+            { cart, paymentID, address },
+            { headers: { Authorization: token } }
+        );
+        setCart([]);
+        await ecommerceURL.patch(
+            "/user/add_cart",
+            { cart },
+            {
+                headers: { Authorization: token },
+            }
+        );
+        // setProductCb(!productCb);
+        Swal.fire({
+            icon: "success",
+            title: "Confirmation",
+            text: "You have placed an order successfully.",
+            showConfirmButton: true,
+            timer: 1500,
+            timerProgressBar: true,
+        });
+    };
+
+    return {
+        total,
+        incrementQuantity,
+        decrementQuantity,
+        removeProduct,
+        tranSuccess,
+    };
 };
