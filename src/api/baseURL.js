@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const ecommerceURL = axios.create({
-    baseURL: "http://localhost:5000",
+    baseURL: "https://tech-ecommerce.herokuapp.com",
 });
 
 // ecommerceURL.interceptors.request.use(
