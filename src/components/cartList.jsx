@@ -1,7 +1,7 @@
 import React from "react";
 import { useCart } from "../hooks/useCart";
 import { CartCard } from "./cards/cartCard";
-// import PayPalButton from "./paypal";
+import PayPalButton from "./paypal";
 
 export const CartList = ({ cart }) => {
     const { total, tranSuccess} = useCart();
@@ -17,7 +17,7 @@ export const CartList = ({ cart }) => {
                 </div>
 
                 <p className="cart__totalPrice">Total: ${total} USD</p>
-                <PayPalButton total={total} tranSuccess={tranSuccess} />
+                <PayPalButton totalCart={total} tranSuccess={tranSuccess} />
             </div>
         </div>
     );
